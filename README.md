@@ -64,7 +64,7 @@ As you can see, this app defines 2 test modules called: `math` and `cool_stuff` 
 
 Let's explore them!
 
-[some_math.h](example/some_math.h)
+[some_math.h](example/cases/some_math.h)
 ```c
 #include <math.h>
 
@@ -79,7 +79,7 @@ MODULE(math, {
 });
 ```
 
-[cool_stuff.h](example/cool_stuff.h)
+[cool_stuff.h](example/cases/cool_stuff.h)
 ```c
 MODULE(cool_stuff, {
     IT("can predict the future", {
