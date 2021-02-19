@@ -93,3 +93,5 @@ As you can see, this is all it takes to cover your code, quite simple, right?
 You can also skip tests you plan on running later in the future (or never :)
 
 Have fun!
+
+![result](https://user-images.githubusercontent.com/9026786/108531043-8bdcc000-72d6-11eb-9a33-4092411a57bd.png)
