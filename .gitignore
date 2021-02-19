@@ -1,52 +1,28 @@
-# Prerequisites
-*.d
+# project files & folders
+build/
+node_modules/
+misc/deploy/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# other
+.DS_Store
+.swp
+.vscode
+.vs
+package-lock.json
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# workdir
+work/
 
-# Precompiled Headers
-*.gch
-*.pch
+# qtcreator
+zpl.creator
+zpl.creator.*
+zpl.cflags
+zpl.config
+zpl.cxxflags
+zpl.includes
+zpl.files
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# gtags
+GPATH
+GRTAGS
+GTAGS
