@@ -4,7 +4,6 @@ jobs:
   build-lin:
     name: Test the tester itself
     runs-on: ubuntu-latest
-    needs: [prep]
     steps:
       - uses: actions/checkout@v1
       - name: Run build on Linux
