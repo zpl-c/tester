@@ -1,5 +1,5 @@
 <div align="center">
-    zpl.tester
+    (amazing zpl tester banner goes here some day :)
 </div>
 
 <div align="center">
