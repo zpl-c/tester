@@ -31,6 +31,7 @@ that you can easily make use of, it looks pleasant (especially on CI flows) and 
 
 * Easy to use single-header framework
 * No dependencies (except the standard library :)
+* Works with C99 code
 * Integrates well within any CI pipeline
 * Supports the following checks: `FAIL`, `UFAIL`, `STRFAIL`, `EQUALS`, `UEQUALS`, `STREQUALS`, `STRCEQUALS`, `STRCNEQUALS`, `STRNEQUALS`, `NEQUALS`, `LESSER`, `GREATER`, `LESSEREQ`, `GREATEREQ`, `SKIP`
 * Did I mention it takes a minimum time to set up?
