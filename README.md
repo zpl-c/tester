@@ -44,7 +44,7 @@ that you can easily make use of, it looks pleasant (especially on CI flows) and 
 # Example Usage
 At first, we should define our entry point for the tester app:
 ```c
-#define UNIT_MAX_CASES 2
+#define UNIT_MAX_MODULES 2
 #include "unit.h"
 
 /* TEST CATEGORIES */
