@@ -1,4 +1,4 @@
-#define UNIT_MAX_CASES 2
+#define UNIT_MAX_MODULES 2
 #include "unit.h"
 
 /* TEST CATEGORIES */

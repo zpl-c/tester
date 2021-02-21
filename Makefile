@@ -3,23 +3,29 @@ CXX?=g++
 WARNS = -Wall -Wextra -Werror
 CFLAGS += -std=c99 -Iinclude $(WARNS)
 
-BUILD_FILES = $(wildcard build/*)
+MULTI_SRCS = $(wildcard example/multi/*.c)
+MULTI_OBJS = $(MULTI_SRCS:.c=.o)
 
-.PHONY: all clean test
+.PHONY: all clean test multi
 
 all: clean test
 
-test: example/tester
-	@echo '> Building unit tests'
-	build/tester
+test: example/tester.o
+	@mkdir -p build
+	@echo '=> Linking tester'
+	$(CC) $< -o build/$(@F)
+	@build/test
+
+multi: $(MULTI_OBJS)
+	@mkdir -p build
+	@echo '=> Linking $@'
+	$(CC) $^ -o build/$(@F)
 
 clean:
-ifneq ($(BUILD_FILES),)
 	@echo '> Cleaning up files'
-	@rm -r $(BUILD_FILES)
-endif
+	@find . -name '*.o' -delete
 
-% : %.c
-	@mkdir -p build
+%.o : %.c
 	@echo '=> Building $(@F)'
-	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o build/$(@F)
+	$(CC) -c $(CFLAGS) $< -o $@
+

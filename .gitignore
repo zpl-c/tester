@@ -2,6 +2,7 @@
 build/
 node_modules/
 misc/deploy/
+*.o
 
 # other
 .DS_Store
