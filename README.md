@@ -54,8 +54,8 @@ At first, we should define our entry point for the tester app:
 int main() {
     UNIT_CREATE("small");
 
-    UNIT_CASE(math);
-    UNIT_CASE(cool_stuff);
+    UNIT_MODULE(math);
+    UNIT_MODULE(cool_stuff);
 
     return UNIT_RUN();
 }

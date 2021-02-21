@@ -8,7 +8,7 @@
 int test1() {
     UNIT_CREATE("test1");
 
-    UNIT_CASE(math);
+    UNIT_MODULE(math);
 
     return UNIT_RUN();
 }
