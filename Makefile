@@ -2,6 +2,7 @@ CC?=gcc
 CXX?=g++
 WARNS = -Wall -Wextra -Werror
 CFLAGS += -std=c99 -Iinclude $(WARNS)
+LDFLAGS += -lm
 
 MULTI_SRCS = $(wildcard example/multi/*.c)
 MULTI_OBJS = $(MULTI_SRCS:.c=.o)
@@ -13,13 +14,13 @@ all: clean test
 test: example/tester.o
 	@mkdir -p build
 	@echo '=> Linking tester'
-	$(CC) $< -o build/$(@F)
+	$(CC) $< $(LDFLAGS) -o build/$(@F)
 	@build/test
 
 multi: $(MULTI_OBJS)
 	@mkdir -p build
 	@echo '=> Linking $@'
-	$(CC) $^ -o build/$(@F)
+	$(CC) $^ $(LDFLAGS) -o build/$(@F)
 
 clean:
 	@echo '> Cleaning up files'
