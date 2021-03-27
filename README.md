@@ -20,8 +20,8 @@
 </div>
 
 # Introduction
-A simple to use library to easily cover your code with tests. No dependencies, no obscure or over-engineered pipeline, just a dead-simple framework
-that you can easily make use of, it looks pleasant (especially on CI flows) and it won't slow you down anyhow.
+Simple to use library to easily cover your code with tests. No dependencies, no obscure or over-engineered pipeline, just a dead-simple framework.
+You can easily make use of it, it looks pleasant (especially on CI flows), and it won't slow you down anyhow.
 ## Who uses this library?
 
 * [zpl](https://github.com/zpl-c/zpl) - This is where the library has originated.
@@ -36,7 +36,7 @@ that you can easily make use of, it looks pleasant (especially on CI flows) and 
 * Supports the following checks: `FAIL`, `UFAIL`, `STRFAIL`, `EQUALS`, `UEQUALS`, `STREQUALS`, `STRCEQUALS`, `STRCNEQUALS`, `STRNEQUALS`, `NEQUALS`, `LESSER`, `GREATER`, `LESSEREQ`, `GREATEREQ`, `SKIP`
 * Did I mention it takes a minimum time to set up?
 
-# How to get the library?
+# How to obtain the library?
 
 * Either clone the repository or download [unit.h](include/unit.h).
 * Include `unit.h` in your test app and cover your code already!
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-As you can see, this app defines 2 test modules called: `math` and `cool_stuff` respectively.
+As you can see, this app defines 2 test modules called: `math` and `cool_stuff`, respectively.
 
 Let's explore them!
 
@@ -90,7 +90,7 @@ MODULE(cool_stuff, {
 });
 ```
 
-As you can see, this is all it takes to cover your code, quite simple, right?
+As you can see, this is all it takes to cover your code, relatively simple, right?
 You can also skip tests you plan on running later in the future (or never :)
 
 Have fun!
