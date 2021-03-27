@@ -1,5 +1,5 @@
 <div align="center">
-    (amazing zpl tester banner goes here some day :)
+    <a href="https://github.com/zpl-c/zpl"><img src="https://user-images.githubusercontent.com/2182108/111983468-d5593e80-8b12-11eb-9c59-8c78ecc0504e.png" alt="zpl" /></a>
 </div>
 
 <div align="center">
