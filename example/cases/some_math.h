@@ -2,10 +2,14 @@
 
 MODULE(math, {
     IT("can do cos(0)", {
-        EQUALS(cosf(0), 1);
+        FEQUALS(cosf(0), 1);
     });
 
     IT("can do sqrt(9)", {
-        EQUALS(sqrtf(9), 3);
+        FEQUALS(sqrtf(9), 3);
+    });
+
+    IT("maybe fails", {
+        FEQUALS(sqrtf(9), 0);
     });
 });

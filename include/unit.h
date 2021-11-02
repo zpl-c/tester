@@ -165,13 +165,15 @@ License:
 
 /* TEST CHECKS */
 #define FAIL(a, b)                             { _errstr = unit__bprintf("\n\n\tassert: \x1B[31m%s:%lld %s %s:%lld\x1B[0m\n\tat %s:%d\n", #a, a, (a == b)?"==":"!=", #b, b, __FILE__, __LINE__); _lasterr = 1; break; }
-#define UFAIL(a, b)                             { _errstr = unit__bprintf("\n\n\tassert: \x1B[31m%s:%llu %s %s:%llu\x1B[0m\n\tat %s:%d\n", #a, a, (a == b)?"==":"!=", #b, b, __FILE__, __LINE__); _lasterr = 1; break; }
+#define UFAIL(a, b)                            { _errstr = unit__bprintf("\n\n\tassert: \x1B[31m%s:%llu %s %s:%llu\x1B[0m\n\tat %s:%d\n", #a, a, (a == b)?"==":"!=", #b, b, __FILE__, __LINE__); _lasterr = 1; break; }
+#define FFAIL(a, b)                            { _errstr = unit__bprintf("\n\n\tassert: \x1B[31m%s:%g %s %s:%g\x1B[0m\n\tat %s:%d\n", #a, a, (a == b)?"==":"!=", #b, b, __FILE__, __LINE__); _lasterr = 1; break; }
 #define STRFAIL(a, b)                          { _errstr = unit__bprintf("\n\n\tassert: \x1B[31m%s:%s %s %s:%s\x1B[0m\n\tat %s:%d\n", #a, (char *)a, (!strcmp(a,b))?"==":"!=", #b, b, __FILE__, __LINE__); _lasterr = 1; break; }
 #define EQUALS(a, b)        if (a != b)        { FAIL(a, b); }
-#define UEQUALS(a, b)        if (a != b)        { UFAIL(a, b); }
+#define UEQUALS(a, b)       if (a != b)        { UFAIL(a, b); }
+#define FEQUALS(a, b)       if (a != b)        { FFAIL(a, b); }
 #define STREQUALS(a, b)     if (!!strcmp(a,b)) { STRFAIL(a, b); }
 #define STRCEQUALS(a, b, c)     if (!!strncmp(a,b, c)) { STRFAIL(a, b); }
-#define STRCNEQUALS(a, b, c)     if (!strncmp(a,b, c)) { STRFAIL(a, b); }
+#define STRCNEQUALS(a, b, c)    if (!strncmp(a,b, c)) { STRFAIL(a, b); }
 #define STRNEQUALS(a, b)    if (!strcmp(a,b))  { STRFAIL(a, b); }
 #define NEQUALS(a, b)       if (a == b)        { FAIL(a, b); }
 #define LESSER(a, b)        if (a >= b)        { FAIL(a, b); }
